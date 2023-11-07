@@ -48,10 +48,10 @@ function Footer({ lightMode, subBg }) {
                 </div>
                 <div className="text">
                   <p className="mb-10">
-                    <a href="#0">info@koboldsolutions.com</a>
+                    <a >info@koboldsolutions.com</a>
                   </p>
                   <h5>
-                    <a href="#">+591 755 21 925</a>
+                    <a >+591 755 21 925</a>
                   </h5>
                 </div>
               </div>
@@ -62,16 +62,16 @@ function Footer({ lightMode, subBg }) {
               </div>
               <ul className="rest social-text">
                 <li>
-                  <a href="#0">Facebook</a>
+                  <a >Facebook</a>
                 </li>
                 <li>
-                  <a href="#0">Twitter</a>
+                  <a>Twitter</a>
                 </li>
                 <li>
-                  <a href="#0">LinkedIn</a>
+                  <a >LinkedIn</a>
                 </li>
                 <li>
-                  <a href="#0">Instagram</a>
+                  <a>Instagram</a>
                 </li>
               </ul>
             </div>
@@ -96,7 +96,7 @@ function Footer({ lightMode, subBg }) {
           <div className="container">
             <div className="row">
               <div className="col-lg-4">
-                <a className="logo icon-img-100" href="/">
+                <a className="logo icon-img-100" >
                   <img src="/dark/assets/imgs/koboldlogo02.png" alt="logo" />
 
                 </a>
