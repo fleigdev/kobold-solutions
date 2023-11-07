@@ -47,10 +47,10 @@ function MainNavbar({ lightMode, mainBg, subBg, noStatic, curve }) {
   return (
     <nav className={`navbar navbar-expand-lg ${curve ? 'nav-crev' : ''} ${noStatic ? '' : 'static'} ${mainBg ? 'main-bg' : ''} ${subBg ? 'sub-bg' : ''}`}>
       <div className="container">
-        <a className="logo icon-img-170" href="/">
+        <Link className="logo icon-img-170" href="/">
           <img src="/dark/assets/imgs/koboldlogo.png" alt="logo" />
 
-        </a>
+        </Link>
         <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" onClick={toggleNavbar}>
           <span className="icon-bar"><i className="fas fa-bars"></i></span>
         </button>
