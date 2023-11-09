@@ -14,6 +14,9 @@ const nextConfig = {
     ignoreDuringBuilds: false,
   },
   assetPrefix: '/kobold-solutions/',
+  publicRuntimeConfig: {
+    assetsPrefix: '/assets/',
+  },
   
 }
 
