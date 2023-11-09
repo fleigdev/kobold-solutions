@@ -17,6 +17,7 @@ const nextConfig = {
   publicRuntimeConfig: {
     assetsPrefix: '/assets/',
   },
+  staticAssets: ['/assets/js'],
   
 }
 
