@@ -30,7 +30,7 @@ function Projects() {
       <div className="row">
             <div className="col-lg-8">
               <div className="position-re">
-                <h6 className="dot-titl mb-10">Experiencias Exitosas en Acción</h6>
+                <h6 className="dot-titl mb-10">Experiencias Exitosas en Acción.</h6>
                 <h2 className="fz-70 fw-700">Proyectos Destacados</h2>
               </div>
             </div>
