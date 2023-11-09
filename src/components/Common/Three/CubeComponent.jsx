@@ -21,12 +21,23 @@ const CubeComponent = () => {
           x: event.clientX,
           y: event.clientY,
         };
+    
+        // Set the initial position of greenLight
+        const rect = containerRef.current.getBoundingClientRect();
+        const x = ((previousMousePosition.x - rect.left) / rect.width) * 2 - 1;
+        const y = -((previousMousePosition.y - rect.top) / rect.height) * 2 + 1;
+        greenLight.current.position.set(x, y, greenLight.current.position.z);
       }
     };
 
     const onMouseMove = (event) => {
-      greenLight.current.position.x = (event.clientX / window.innerWidth) * 10 - 5;
-      greenLight.current.position.y = -(event.clientY / window.innerHeight) * 10 + 5;
+      // Calculate the position in world space based on the mouse coordinates
+      const rect = containerRef.current.getBoundingClientRect();
+      const x = ((event.clientX - rect.left) / rect.width) * 2 - 1;
+      const y = -((event.clientY - rect.top) / rect.height) * 2 + 1;
+
+      // Set the light position directly in world space
+      greenLight.current.position.set(x, y, greenLight.current.position.z);
     };
 
     const onMouseUp = () => {
@@ -67,16 +78,16 @@ const CubeComponent = () => {
       cube.current = new THREE.Mesh(geometry, materials);
       scene.add(cube.current);
 
-      greenLight.current = new THREE.PointLight(0x278f48, 1, 5); // Green light
+      greenLight.current = new THREE.PointLight(0x278f48, 1, 10); // Green light
       greenLight.current.position.set(0, 0, 2);
       scene.add(greenLight.current);
   
       // Add a white directional light
-      const light1 = new THREE.DirectionalLight(0x919191, 1);
+      const light1 = new THREE.DirectionalLight(0x919191, 10);
       light1.position.set(0, 1, 0);
       scene.add(light1);
 
-      const light2 = new THREE.DirectionalLight(0xedfff0, 1);
+      const light2 = new THREE.DirectionalLight(0xedfff0, 10);
       light2.position.set(0, -1, 0);
       scene.add(light2);
 

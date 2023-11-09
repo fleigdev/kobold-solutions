@@ -31,20 +31,21 @@ export default function App({ Component, pageProps }) {
       {/* <Script strategy="beforeInteractive" src="/showcase/assets/js/anime.min.js"></Script> */}
       {/* <Script strategy="lazyOnload" src="/assets/js/imgReveal/demo.js"></Script> */}
       <Script strategy="lazyOnload" src="/assets/js/scripts.js"></Script>
-      {/* 
-      
-      <Script strategy="beforeInteractive" src="/assets/js/charming.min.js"></Script>
-      <Script strategy="beforeInteractive" src="/assets/js/countdown.js"></Script>
-      <Script strategy="beforeInteractive" src="/assets/js/parallax.min.js"></Script>
-      <Script strategy="beforeInteractive" src="/assets/js/ScrollTrigger.min.js"></Script>
-      
-      <Script strategy="beforeInteractive" src="/assets/js/splitting.min.js"></Script>
-      <Script strategy="beforeInteractive" src="/assets/js/isotope.pkgd.min.js"></Script>
-      <Script strategy="beforeInteractive" src="/assets/js/imgReveal/imagesloaded.pkgd.min.js"></Script>
-      <Script strategy="beforeInteractive" src="/assets/js/ScrollSmoother.min.js"></Script>
-     
-      <Script strategy="lazyOnload" src="/assets/js/imgReveal/demo.js"></Script>
-       */}
+        {/* 
+          
+            <Script strategy="beforeInteractive" src="/assets/js/charming.min.js"></Script>
+            <Script strategy="beforeInteractive" src="/assets/js/countdown.js"></Script>
+            <Script strategy="beforeInteractive" src="/assets/js/parallax.min.js"></Script>
+            <Script strategy="beforeInteractive" src="/assets/js/ScrollTrigger.min.js"></Script>
+            
+            <Script strategy="beforeInteractive" src="/assets/js/splitting.min.js"></Script>
+            <Script strategy="beforeInteractive" src="/assets/js/isotope.pkgd.min.js"></Script>
+            <Script strategy="beforeInteractive" src="/assets/js/imgReveal/imagesloaded.pkgd.min.js"></Script>
+            <Script strategy="beforeInteractive" src="/assets/js/ScrollSmoother.min.js"></Script>
+          
+            <Script strategy="lazyOnload" src="/assets/js/imgReveal/demo.js"></Script>
+
+        */}
     </>
   );
 }
