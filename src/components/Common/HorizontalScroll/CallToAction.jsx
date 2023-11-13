@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import Link from 'next/link';
 //= Scripts
 import loadBackgroudImages from '@/common/loadBackgroudImages';
-
+import prefix from '@/common/prefix';
 function CallToAction({ lightMode }) {
   useEffect(() => {
     loadBackgroudImages();
@@ -29,13 +29,13 @@ function CallToAction({ lightMode }) {
                   </svg></span>
                   <span className="full-width">Contacto</span>
                 </div>
-                <img src={`/${lightMode ? 'light' : 'dark'}/assets/imgs/svg-assets/circle-star.svg`} alt="" className="circle-star" />
+                <img src={`${prefix}/dark/assets/imgs/svg-assets/circle-star.svg`} alt="" className="circle-star" />
               </Link>
             </div>
           </div>
         </div>
       </div>
-      <div className="bg-pattern bg-img" data-background="dark/assets/imgs/patterns/graph.png"></div>
+      <div className="bg-pattern bg-img" data-background={`${prefix}/dark/assets/imgs/patterns/graph.png`}></div>
     </div>
   )
 }

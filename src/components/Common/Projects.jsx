@@ -1,25 +1,25 @@
 import React from 'react';
 //= Data
 import { useState } from 'react';
-
+import prefix from '@/common/prefix';
 
 function Projects() {
     const [data, setData] = useState([
         {
           "id": 1,
-          "picture": "/dark/assets/imgs/landing/portfolio.jpg",
+          "picture": `${prefix}/dark/assets/imgs/landing/portfolio.jpg`,
           "name": "Tenth XR",
           "position": "Technology Services"
         },
         {
           "id": 2,
-          "picture": "/dark/assets/imgs/landing/portfolio.jpg",
+          "picture": `${prefix}/dark/assets/imgs/landing/portfolio.jpg`,
           "name": "Shopi Bolivia",
           "position": "E-Commerce Platform"
         },
         {
           "id": 3,
-          "picture": "/dark/assets/imgs/landing/portfolio.jpg",
+          "picture": `${prefix}/dark/assets/imgs/landing/portfolio.jpg`,
           "name": "TeBanko",
           "position": "Finntech Services"
         }

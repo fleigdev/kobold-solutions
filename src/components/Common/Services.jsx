@@ -3,30 +3,30 @@ import Link from 'next/link';
 import { useState } from 'react';
 //= Data
 //import data from '@/data/CreativeAgency/services.json';
-
+import prefix from '@/common/prefix';
 function Services({ lightMode }) {
     const [data, setData] = useState([
         {
           "id": 1,
-          "image": "/assets/imgs/icons/0.png",
+          "image": `${prefix}/assets/imgs/icons/0.png`,
           "title": "Desarrollo de Software a Medida",
           "text": "Praesent faucibus nisl sit amet nulla pretium a sed purus."
         },
         {
           "id": 2,
-          "image": "/assets/imgs/icons/1.png",
+          "image": `${prefix}/assets/imgs/icons/1.png`,
           "title": "Diseño UI/UX y Branding",
           "text": "Praesent faucibus nisl sit amet nulla pretium a sed purus."
         },
         {
           "id": 3,
-          "image": "/assets/imgs/icons/2.png",
+          "image": `${prefix}/assets/imgs/icons/2.png`,
           "title": "Soluciones Web en WordPress",
           "text": "Praesent faucibus nisl sit amet nulla pretium a sed purus."
         },
         {
           "id": 4,
-          "image": "/assets/imgs/icons/0.png",
+          "image": `${prefix}/assets/imgs/icons/0.png`,
           "title": "Consultoría y Optimización de Software",
           "text": "Praesent faucibus nisl sit amet nulla pretium a sed purus."
         }

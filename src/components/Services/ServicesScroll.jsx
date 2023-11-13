@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 //= Scripts
 import loadBackgroudImages from '@/common/loadBackgroudImages';
 import isInView from '@/common/isInView';
-
+import prefix from '@/common/prefix';
 import { useState } from 'react';
 
 function ServicesScroll({ lightMode }) {
@@ -11,7 +11,7 @@ function ServicesScroll({ lightMode }) {
     const [data, setData] = useState([
         {
           "id": 1,
-          "image": "assets/imgs/services/1.jpg",
+          "image": `/assets/imgs/services/1.jpg`,
           "number": "01.",
           "type": "Desarrollo de Soluciones Personalizadas de Software",
           "title": "Calidad en cada línea de código",
@@ -26,7 +26,7 @@ function ServicesScroll({ lightMode }) {
         },
         {
           "id": 2,
-          "image": "assets/imgs/services/2.jpg",
+          "image": `/assets/imgs/services/2.jpg`,
           "number": "02.",
           "type": "Diseño UI/UX y Branding",
           "title": "Identidad de Marca",
@@ -40,7 +40,7 @@ function ServicesScroll({ lightMode }) {
         },
         {
           "id": 3,
-    "image": "assets/imgs/services/3.jpg",
+    "image": `/assets/imgs/services/3.jpg`,
     "number": "03.",
     "type": "Consultoría y Optimización de Software",
     "title": "Optimización de Software",
@@ -107,7 +107,7 @@ function ServicesScroll({ lightMode }) {
             <div className="left" id="sticky_item">
               {
                 data.map((item, index) => (
-                  <div id={`tab-${index + 1}`} className="img bg-img" data-background={`${lightMode ? '/light/' : '/dark/'}${item.image}`} key={index} />
+                  <div id={`tab-${index + 1}`} className="img bg-img" data-background={`${prefix}/${lightMode ? '/light/' : '/dark/'}${item.image}`} key={index} />
                 ))
               }
             </div>
@@ -116,9 +116,7 @@ function ServicesScroll({ lightMode }) {
             {
               data.map((item, index) => (
                 <div className={`cont ${index === 0 ? 'active' : ''}`} data-tab={`tab-${index + 1}`} key={index}>
-                  <div className="img-hiden">
-                    <img src={`${lightMode ? '/light/' : '/dark/'}${item.image}`} alt="" />
-                  </div>
+
                   <span className="sub-title mb-15">{item.number} {item.type}</span>
                   <h2 className="mb-15">{item.title}.</h2>
                   <div className="row justify-content-center">

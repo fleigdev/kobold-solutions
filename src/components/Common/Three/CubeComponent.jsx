@@ -3,6 +3,7 @@ import * as THREE from 'three';
 import {TextGeometry} from 'three/addons/geometries/TextGeometry.js' 
 import { FontLoader } from 'three/addons/loaders/FontLoader.js';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
+import prefix from '@/common/prefix';
 const CubeComponent = () => {
     const containerRef = useRef();
     const cube = useRef();
@@ -31,13 +32,12 @@ const CubeComponent = () => {
     };
 
     const onMouseMove = (event) => {
-      // Calculate the position in world space based on the mouse coordinates
-      const rect = containerRef.current.getBoundingClientRect();
-      const x = ((event.clientX - rect.left) / rect.width) * 2 - 1;
-      const y = -((event.clientY - rect.top) / rect.height) * 2 + 1;
-
-      // Set the light position directly in world space
-      greenLight.current.position.set(x, y, greenLight.current.position.z);
+      if (containerRef.current) {
+        const rect = containerRef.current.getBoundingClientRect();
+        const x = ((event.clientX - rect.left) / rect.width) * 2 - 1;
+        const y = -((event.clientY - rect.top) / rect.height) * 2 + 1;
+        greenLight.current.position.set(x, y, greenLight.current.position.z);
+      }
     };
 
     const onMouseUp = () => {
@@ -56,9 +56,9 @@ const CubeComponent = () => {
       const controls = new OrbitControls(camera, renderer.domElement);
 
       const textureLoader = new THREE.TextureLoader();
-      const logoTexture = textureLoader.load('dark/assets/imgs/koboldlogo02.png');
-      const bumpMap = textureLoader.load('dark/assets/imgs/three/NormalMap.png');
-      const specMap = textureLoader.load('dark/assets/imgs/three/SpecularMap.png');
+      const logoTexture = textureLoader.load(`${prefix}/dark/assets/imgs/koboldlogo02.png`);
+      const bumpMap = textureLoader.load(`${prefix}/dark/assets/imgs/three/NormalMap.png`);
+      const specMap = textureLoader.load(`${prefix}/dark/assets/imgs/three/SpecularMap.png`);
   
       // Create a larger cube with a Phong material
       const cubeSize = 3;

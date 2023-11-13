@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-
+import prefix from '@/common/prefix';
 function ServicesTab({ lightMode }) {
   function openTab(event) {
     document.querySelectorAll('.tab-content').forEach(element => element.style.display = 'none');
@@ -17,11 +17,11 @@ function ServicesTab({ lightMode }) {
               <div className="tab-content current" id="tabs-1">
                 <div className="item">
                   <div className="img">
-                    <img src={`/${lightMode ? 'light' : 'dark'}/assets/imgs/services/1.jpg`} alt="" />
+                    <img src={`${prefix}//${lightMode ? 'light' : 'dark'}/assets/imgs/services/1.jpg`} alt="" />
                   </div>
                   <div className="cont sub-bg">
                     <div className="icon-img-60 mb-40">
-                      <img src={`/${lightMode ? 'light' : 'dark'}/assets/imgs/icons/0.png`} alt="" />
+                      <img src={`${prefix}//${lightMode ? 'light' : 'dark'}/assets/imgs/icons/0.png`} alt="" />
                     </div>
                     <div className="text">
                       <p>Tu visión y objetivos son el corazón de cada decisión que tomamos. A través de la comunicación abierta y la colaboración, damos vida a tus ideas, 
@@ -37,11 +37,11 @@ function ServicesTab({ lightMode }) {
               <div className="tab-content" id="tabs-2">
                 <div className="item">
                   <div className="img">
-                    <img src={`/${lightMode ? 'light' : 'dark'}/assets/imgs/services/2.jpg`} alt="" />
+                    <img src={`${prefix}/${lightMode ? 'light' : 'dark'}/assets/imgs/services/2.jpg`} alt="" />
                   </div>
                   <div className="cont sub-bg">
                     <div className="icon-img-60 mb-40">
-                      <img src={`/${lightMode ? 'light' : 'dark'}/assets/imgs/icons/1.png`} alt="" />
+                      <img src={`${prefix}/${lightMode ? 'light' : 'dark'}/assets/imgs/icons/1.png`} alt="" />
                     </div>
                     <div className="text">
                       <p>La innovación está en nuestro ADN. Siempre buscamos nuevas formas de elevar tu proyecto, incorporando tecnologías de vanguardia y tendencias de diseño.</p>
@@ -56,11 +56,11 @@ function ServicesTab({ lightMode }) {
               <div className="tab-content" id="tabs-3">
                 <div className="item">
                   <div className="img">
-                    <img src={`/${lightMode ? 'light' : 'dark'}/assets/imgs/services/3.jpg`} alt="" />
+                    <img src={`${prefix}/${lightMode ? 'light' : 'dark'}/assets/imgs/services/3.jpg`} alt="" />
                   </div>
                   <div className="cont sub-bg">
                     <div className="icon-img-60 mb-40">
-                      <img src={`/${lightMode ? 'light' : 'dark'}/assets/imgs/icons/2.png`} alt="" />
+                      <img src={`${prefix}/${lightMode ? 'light' : 'dark'}/assets/imgs/icons/2.png`} alt="" />
                     </div>
                     <div className="text">
                       <p>We are a creative studio specializing in design, development and strategy many different skills and disciplines in the production of all web.</p>
@@ -75,11 +75,11 @@ function ServicesTab({ lightMode }) {
               <div className="tab-content" id="tabs-4">
                 <div className="item">
                   <div className="img">
-                    <img src={`/${lightMode ? 'light' : 'dark'}/assets/imgs/services/1.jpg`} alt="" />
+                    <img src={`${prefix}/${lightMode ? 'light' : 'dark'}/assets/imgs/services/1.jpg`} alt="" />
                   </div>
                   <div className="cont sub-bg">
                     <div className="icon-img-60 mb-40">
-                      <img src={`/${lightMode ? 'light' : 'dark'}/assets/imgs/icons/0.png`} alt="" />
+                      <img src={`${prefix}/${lightMode ? 'light' : 'dark'}/assets/imgs/icons/0.png`} alt="" />
                     </div>
                     <div className="text">
                       <p>Tu audiencia está en el centro de nuestra estrategia. Diseñamos y desarrollamos teniendo en cuenta al usuario final, asegurándonos de que tu proyecto resuene con tu público objetivo.</p>

@@ -1,7 +1,11 @@
 import React, { useEffect } from 'react';
 import Link from 'next/link';
+import prefix from '@/common/prefix';
 
 function MainNavbar({ lightMode, mainBg, subBg, noStatic, curve }) {
+
+  const imagePath = `${prefix}/dark/assets/imgs/koboldlogo.png`;
+
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
@@ -48,7 +52,7 @@ function MainNavbar({ lightMode, mainBg, subBg, noStatic, curve }) {
     <nav className={`navbar navbar-expand-lg ${curve ? 'nav-crev' : ''} ${noStatic ? '' : 'static'} ${mainBg ? 'main-bg' : ''} ${subBg ? 'sub-bg' : ''}`}>
       <div className="container">
         <Link className="logo icon-img-170" href="/">
-          <img src="/dark/assets/imgs/koboldlogo.png" alt="logo" />
+          <img src={imagePath} alt="logo" />
 
         </Link>
         <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" onClick={toggleNavbar}>

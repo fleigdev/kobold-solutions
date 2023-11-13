@@ -1,6 +1,9 @@
 import { Html, Head, Main, NextScript } from 'next/document'
 
 export default function Document() {
+
+  const prefix = '/kobold-solutions';
+
   return (
     <Html lang="en">
       <Head>
@@ -20,11 +23,11 @@ export default function Document() {
         {/* ------ bootstrap icons cdn ------ */}
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css" />
         {/* ------ Plugins ------ */}
-        <link rel="stylesheet" href="/dark/assets/css/plugins.css" />
+        <link rel="stylesheet" href={`${prefix}/dark/assets/css/plugins.css`} />
         {/* ------ Core Style Css ------ */}
-        <link rel="stylesheet" href="/dark/assets/css/style.css" />
+        <link rel="stylesheet" href={`${prefix}/dark/assets/css/style.css`} />
 
-        <link rel="stylesheet" href="/dark/assets/css/base.css" />
+        <link rel="stylesheet" href={`${prefix}/dark/assets/css/base.css`} />
       </Head>
       <body>
         <Main />

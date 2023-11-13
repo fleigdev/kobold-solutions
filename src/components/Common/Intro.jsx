@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-
+import prefix from '@/common/prefix';
 function Intro({ lightMode }) {
   return (
     <section className="about section-padding main-bg">
@@ -19,7 +19,7 @@ function Intro({ lightMode }) {
                 </div>
               </div>
               <div className="half-circle-img">
-                <img src="/dark/assets/imgs/landing/ofi.jpg" alt="" />
+                <img src={`${prefix}/dark/assets/imgs/landing/ofi.jpg`} alt="" />
               </div>
             </div>
           </div>
@@ -55,7 +55,7 @@ function Intro({ lightMode }) {
               <div className="d-flex align-items-center pb-20 mb-30 bord-thin-bottom">
                 <div className="mr-30">
                   <div className="icon-img-50">
-                    <img src={`/${lightMode ? 'light' : 'dark'}/assets/imgs/icons/0.png`} alt="" />
+                    <img src={`${prefix}/${lightMode ? 'light' : 'dark'}/assets/imgs/icons/0.png`} alt="" />
                   </div>
                 </div>
                 <div>
@@ -82,7 +82,7 @@ function Intro({ lightMode }) {
               <div className="d-flex align-items-center pb-20 mb-30 bord-thin-bottom">
                 <div className="mr-30">
                   <div className="icon-img-50">
-                    <img src={`/${lightMode ? 'light' : 'dark'}/assets/imgs/icons/1.png`} alt="" />
+                    <img src={`${prefix}/${lightMode ? 'light' : 'dark'}/assets/imgs/icons/1.png`} alt="" />
                   </div>
                 </div>
                 <div>
@@ -108,7 +108,7 @@ function Intro({ lightMode }) {
               <div className="d-flex align-items-center pb-20 mb-30 bord-thin-bottom">
                 <div className="mr-30">
                   <div className="icon-img-50">
-                    <img src={`/${lightMode ? 'light' : 'dark'}/assets/imgs/icons/2.png`} alt="" />
+                    <img src={`${prefix}/${lightMode ? 'light' : 'dark'}/assets/imgs/icons/2.png`} alt="" />
                   </div>
                 </div>
                 <div>

@@ -2,7 +2,7 @@ import React, { useEffect, useLayoutEffect } from 'react';
 import { gsap } from 'gsap';
 //= Data
 import  {ScrollTrigger}  from "gsap/dist/ScrollTrigger.js";
-
+import prefix from '@/common/prefix';
 function Footer({ lightMode, subBg }) {
 
   const useIsomorphicLayoutEffect = typeof window !== "undefined" 
@@ -97,7 +97,7 @@ function Footer({ lightMode, subBg }) {
             <div className="row">
               <div className="col-lg-4">
                 <a className="logo icon-img-100" >
-                  <img src="/dark/assets/imgs/koboldlogo02.png" alt="logo" />
+                  <img src={`${prefix}/dark/assets/imgs/koboldlogo02.png`} alt="logo" />
 
                 </a>
               </div>

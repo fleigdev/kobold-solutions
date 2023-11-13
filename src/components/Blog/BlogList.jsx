@@ -2,14 +2,17 @@ import React from 'react';
 import Link from 'next/link';
 //= Data
 import { useState } from 'react';
+import prefix from '@/common/prefix';
 
 function BlogList() {
+
+
     const [data, setData] = useState([
         {
           "id": 1,
           "date": "August 6, 2022",
           "title": "Free advertising for your online business.",
-          "image": "/dark/assets/imgs/blog/cover.jpg",
+          "image": `${prefix}/dark/assets/imgs/blog/cover.jpg`,
           "tags": [
             "Marketing",
             "Design"
@@ -19,7 +22,7 @@ function BlogList() {
           "id": 2,
           "date": "August 6, 2022",
           "title": "Business meeting 2023 in San Francisco.",
-          "image": "/dark/assets/imgs/blog/cover.jpg",
+          "image": `${prefix}/dark/assets/imgs/blog/cover.jpg`,
           "tags": [
             "Marketing",
             "Design"
@@ -29,7 +32,7 @@ function BlogList() {
           "id": 3,
           "date": "August 6, 2022",
           "title": "Free advertising for your online business.",
-          "image": "/dark/assets/imgs/blog/cover.jpg",
+          "image": `${prefix}/dark/assets/imgs/blog/cover.jpg`,
           "tags": [
             "Marketing",
             "Design"
@@ -39,7 +42,7 @@ function BlogList() {
           "id": 4,
           "date": "August 6, 2022",
           "title": "Business meeting 2023 in San Francisco.",
-          "image": "/dark/assets/imgs/blog/cover.jpg",
+          "image": `${prefix}/dark/assets/imgs/blog/cover.jpg`,
           "tags": [
             "Marketing",
             "Design"
@@ -49,7 +52,7 @@ function BlogList() {
           "id": 5,
           "date": "August 6, 2022",
           "title": "Free advertising for your online business.",
-          "image": "/dark/assets/imgs/blog/cover.jpg",
+          "image": `${prefix}/dark/assets/imgs/blog/cover.jpg`,
           "tags": [
             "Marketing",
             "Design"
@@ -59,7 +62,7 @@ function BlogList() {
           "id": 6,
           "date": "August 6, 2022",
           "title": "Business meeting 2023 in San Francisco.",
-          "image": "/dark/assets/imgs/blog/cover.jpg",
+          "image": `${prefix}/dark/assets/imgs/blog/cover.jpg`,
           "tags": [
             "Marketing",
             "Design"

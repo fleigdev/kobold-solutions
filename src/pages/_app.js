@@ -8,6 +8,21 @@ import '@/styles/globals.css';
 export default function App({ Component, pageProps }) {
   const getLayout = Component.getLayout || ((page) => page);
 
+  const prefix = '/kobold-solutions';
+
+  // Define the relative paths for your scripts
+  const scriptPaths = [
+    '/assets/js/plugins.js',
+    '/assets/js/TweenMax.min.js',
+    '/assets/js/charming.min.js',
+    '/assets/js/countdown.js',
+    '/assets/js/parallax.min.js',
+    '/assets/js/splitting.min.js',
+    '/assets/js/isotope.pkgd.min.js',
+    '/assets/js/scripts.js'
+    // Add more script paths as needed
+  ];
+
   return getLayout(
     <>
       <Head>
@@ -17,35 +32,21 @@ export default function App({ Component, pageProps }) {
 
       <Component {...pageProps} />
 
-      <Script strategy="beforeInteractive" src="/assets/js/plugins.js"></Script>
-      <Script strategy="beforeInteractive" src="/assets/js/TweenMax.min.js"></Script>
-      <Script strategy="beforeInteractive" src="/assets/js/charming.min.js"></Script>
-      <Script strategy="beforeInteractive" src="/assets/js/countdown.js"></Script>
-      <Script strategy="beforeInteractive" src="/assets/js/parallax.min.js"></Script>
-      {/* <Script strategy="beforeInteractive" src="/assets/js/ScrollTrigger.min.js"></Script> */}
-      {/* <Script strategy="beforeInteractive" src="/assets/js/gsap.min.js"></Script> */}
-      <Script strategy="beforeInteractive" src="/assets/js/splitting.min.js"></Script>
-      <Script strategy="beforeInteractive" src="/assets/js/isotope.pkgd.min.js"></Script>
-      {/* <Script strategy="beforeInteractive" src="/assets/js/imgReveal/imagesloaded.pkgd.min.js"></Script> */}
-      {/* <Script strategy="beforeInteractive" src="/assets/js/ScrollSmoother.min.js"></Script> */}
-      {/* <Script strategy="beforeInteractive" src="/showcase/assets/js/anime.min.js"></Script> */}
-      {/* <Script strategy="lazyOnload" src="/assets/js/imgReveal/demo.js"></Script> */}
-      <Script strategy="lazyOnload" src="/assets/js/scripts.js"></Script>
-        {/* 
-          
-            <Script strategy="beforeInteractive" src="/assets/js/charming.min.js"></Script>
-            <Script strategy="beforeInteractive" src="/assets/js/countdown.js"></Script>
-            <Script strategy="beforeInteractive" src="/assets/js/parallax.min.js"></Script>
-            <Script strategy="beforeInteractive" src="/assets/js/ScrollTrigger.min.js"></Script>
-            
-            <Script strategy="beforeInteractive" src="/assets/js/splitting.min.js"></Script>
-            <Script strategy="beforeInteractive" src="/assets/js/isotope.pkgd.min.js"></Script>
-            <Script strategy="beforeInteractive" src="/assets/js/imgReveal/imagesloaded.pkgd.min.js"></Script>
-            <Script strategy="beforeInteractive" src="/assets/js/ScrollSmoother.min.js"></Script>
-          
-            <Script strategy="lazyOnload" src="/assets/js/imgReveal/demo.js"></Script>
+      {scriptPaths.map((scriptPath, index) => (
+        <Script key={index} strategy="beforeInteractive" src={`${prefix}${scriptPath}`}></Script>
+      ))}
 
-        */}
+      {/* <Script strategy="beforeInteractive" src="/kobold-solutions/assets/js/plugins.js"></Script>
+      <Script strategy="beforeInteractive" src="/kobold-solutions/assets/js/TweenMax.min.js"></Script>
+      <Script strategy="beforeInteractive" src="/kobold-solutions/assets/js/charming.min.js"></Script>
+      <Script strategy="beforeInteractive" src="/kobold-solutions/assets/js/countdown.js"></Script>
+      <Script strategy="beforeInteractive" src="/kobold-solutions/assets/js/parallax.min.js"></Script>
+      
+      <Script strategy="beforeInteractive" src="/kobold-solutions/assets/js/splitting.min.js"></Script>
+      <Script strategy="beforeInteractive" src="/kobold-solutions/assets/js/isotope.pkgd.min.js"></Script>
+      <Script strategy="lazyOnload" src="/kobold-solutions/assets/js/scripts.js"></Script> */}
+       {/* Add more scripts as needed */}
+       <Script strategy="lazyOnload" src={`${prefix}/assets/js/scripts.js`}></Script>
     </>
   );
 }

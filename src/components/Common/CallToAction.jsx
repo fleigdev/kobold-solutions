@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import Link from 'next/link';
 //= Scripts
 import parallaxie from '@/common/parallaxie';
-
+import prefix from '@/common/prefix';
 function CallToAction({ lightMode, innerPageStyle }) {
   useEffect(() => {
     parallaxie(`.sec-bg-img.parallaxie`, 0.4);
@@ -11,7 +11,7 @@ function CallToAction({ lightMode, innerPageStyle }) {
   return (
     <section className="call-action-img">
       <div className="container">
-        <div className="sec-bg-img bg-img parallaxie" data-background="/dark/assets/imgs/services/parallax.jpg"></div>
+        <div className="sec-bg-img bg-img parallaxie" data-background={`${prefix}/dark/assets/imgs/services/parallax.jpg`}></div>
         <div className="sec-lg-head section-padding">
           <div className="row ontop">
             <div className="col-11 d-flex align-items-center">
@@ -29,7 +29,7 @@ function CallToAction({ lightMode, innerPageStyle }) {
                     </svg></span>
                     <span className="full-width">Contacto</span>
                   </div>
-                  <img src={`/${lightMode ? 'light' : 'dark'}/assets/imgs/svg-assets/circle-star.svg`} alt="" className="circle-star" />
+                  <img src={`${prefix}/dark/assets/imgs/svg-assets/circle-star.svg`} alt="" className="circle-star" />
                 </Link>
               </div>
             </div>

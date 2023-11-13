@@ -3,7 +3,8 @@ import React, { useEffect, useLayoutEffect } from 'react';
 import loadBackgroudImages from '@/common/loadBackgroudImages';
 import CubeComponent from './Three/CubeComponent';
 import IdeasText from './Three/IdeasText';
-
+import prefix
+ from '@/common/prefix';
 const useIsomorphicLayoutEffect = typeof window !== "undefined" 
 ? useLayoutEffect 
 : useEffect;
@@ -12,6 +13,8 @@ function Header({ lightMode }) {
   useIsomorphicLayoutEffect(() => {
     loadBackgroudImages();
   }, []);
+
+  
 
   return (
     
@@ -92,7 +95,7 @@ function Header({ lightMode }) {
           </div>
         </div>
       </div>
-      <div className="bg-pattern bg-img" data-background={`/${lightMode ? 'light' : 'dark'}/assets/imgs/patterns/graph.png`}></div>
+      <div className="bg-pattern bg-img" data-background={`${prefix}/${lightMode ? 'light' : 'dark'}/assets/imgs/patterns/graph.png`}></div>
     </header>
   )
 }
