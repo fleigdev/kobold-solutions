@@ -7,19 +7,19 @@ function Projects() {
     const [data, setData] = useState([
         {
           "id": 1,
-          "picture": `${prefix}/dark/assets/imgs/landing/portfolio.jpg`,
+          "picture": `${prefix}/dark/assets/imgs/projects/tebanko.png`,
           "name": "Tenth XR",
           "position": "Technology Services"
         },
         {
           "id": 2,
-          "picture": `${prefix}/dark/assets/imgs/landing/portfolio.jpg`,
+          "picture": `${prefix}/dark/assets/imgs/projects/tenth.png`,
           "name": "Shopi Bolivia",
           "position": "E-Commerce Platform"
         },
         {
           "id": 3,
-          "picture": `${prefix}/dark/assets/imgs/landing/portfolio.jpg`,
+          "picture": `${prefix}/dark/assets/imgs/projects/shopiapp.png`,
           "name": "TeBanko",
           "position": "Finntech Services"
         }
@@ -47,7 +47,7 @@ function Projects() {
                 <div className="swiper-slide mb-50">
                   <div className="item">
                     <div className="img">
-                      <img src={item.picture} alt="" />
+                      <img src={item.picture} height="200px" alt="" />
                     </div>
                     <div className="info">
                       <div className="main-marq team-position">
